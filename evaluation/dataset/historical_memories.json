@@ -1,0 +1,42 @@
+[
+    {
+        "incident_id": "MEM-001",
+        "service": "payment-service",
+        "severity": "HIGH",
+        "root_cause": "Database connection pool exhaustion",
+        "evidence": [
+            "Connection pool exhausted",
+            "JDBC connection timeout"
+        ]
+    },
+    {
+        "incident_id": "MEM-002",
+        "service": "cache-service",
+        "severity": "HIGH",
+        "root_cause": "Redis failure",
+        "evidence": [
+            "Redis unavailable",
+            "Unable to connect to Redis"
+        ]
+    },
+    {
+        "incident_id": "MEM-003",
+        "service": "api-service",
+        "severity": "HIGH",
+        "root_cause": "High API latency",
+        "evidence": [
+            "Request latency exceeded threshold",
+            "API response time increased"
+        ]
+    },
+    {
+        "incident_id": "MEM-004",
+        "service": "order-service",
+        "severity": "CRITICAL",
+        "root_cause": "Service crash",
+        "evidence": [
+            "Service process terminated",
+            "Service crashed"
+        ]
+    }
+]

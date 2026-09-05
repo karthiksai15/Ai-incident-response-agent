@@ -1,0 +1,66 @@
+[
+    {
+        "incident_id": "EVAL-001",
+        "service": "payment-service",
+        "severity": "HIGH",
+        "logs": [
+            "Database response time exceeded threshold",
+            "Timeout waiting for database connection",
+            "Connection pool exhausted",
+            "Failed to acquire JDBC connection",
+            "Payment request failed"
+        ],
+        "expected_root_cause": "Database connection pool exhaustion",
+        "expected_evidence": [
+            "Connection pool exhausted",
+            "Failed to acquire JDBC connection"
+        ]
+    },
+    {
+        "incident_id": "EVAL-002",
+        "service": "cache-service",
+        "severity": "HIGH",
+        "logs": [
+            "Redis connection timeout",
+            "Redis unavailable",
+            "Cache requests failing",
+            "Unable to connect to Redis"
+        ],
+        "expected_root_cause": "Redis failure",
+        "expected_evidence": [
+            "Redis unavailable",
+            "Unable to connect to Redis"
+        ]
+    },
+    {
+        "incident_id": "EVAL-003",
+        "service": "api-service",
+        "severity": "HIGH",
+        "logs": [
+            "Request latency exceeded threshold",
+            "API response time increased",
+            "Requests taking longer than expected"
+        ],
+        "expected_root_cause": "High API latency",
+        "expected_evidence": [
+            "Request latency exceeded threshold",
+            "API response time increased"
+        ]
+    },
+    {
+        "incident_id": "EVAL-004",
+        "service": "order-service",
+        "severity": "CRITICAL",
+        "logs": [
+            "Service process terminated",
+            "Health check failed",
+            "Service unavailable",
+            "Service crashed"
+        ],
+        "expected_root_cause": "Service crash",
+        "expected_evidence": [
+            "Service process terminated",
+            "Service crashed"
+        ]
+    }
+]
